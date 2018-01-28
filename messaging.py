@@ -5,8 +5,8 @@ from flask import Flask
 
 
 
-account_sid = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
-auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
+account_sid = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 
@@ -14,6 +14,8 @@ client_name = "Ved"
 string1 = "xanax"
 string2 = "two times a day" #how many times a day
 string3 = "two weeks"
+
+
 
 def convert_to_int(number):
     return {
@@ -74,26 +76,22 @@ def convert(list_of_times_in_int):
     # first = list[0]
     # second = list[1]
 
-for message in client.messages.list():
-    if message.direction == 'inbound':
-        print(message.body)
 
 # for i in range(convert_to_int(first)):
 #     for q in range(convert_to_int(second)):
 #
 
 def send_messages():
+    to = "+1" #fill this in again
     message = client.messages.create(
-        to="+16233301676",
-        from_="+18016152108",
+        to,
+        from_="+1", #fill this in again too
         body="Reminder for " + client_name + ": " + "take " +string1 + " now.")
 
+timeList = convert(times_per_day(3))
+for i in range(numbers_per_day()):
+     schedule.every().day.at("0:04").do(send_messages)
 
-# timeList = convert(times_per_day(3))
-# for i in range(numbers_per_day()):
-#     schedule.every().day.at("18:39").do(send_messages)
-#
 
-#while True:
- #   schedule.run_pending()
-#print(message.sid)
+while True:
+    schedule.run_pending()
