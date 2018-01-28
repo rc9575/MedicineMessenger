@@ -3,8 +3,8 @@ from twilio.twiml.messaging_response import MessagingResponse, Message
 from twilio.rest import Client
 import urllib
 
-account_sid = "ACbc21a369eb35233ebe1a8995310c634b"
-auth_token = "9ba041095cfac3649aad180dd7f78d52"
+account_sid = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 client = Client(account_sid, auth_token)
 app = Flask(__name__)
