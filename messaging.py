@@ -5,8 +5,8 @@ from flask import Flask
 
 
 
-account_sid = "ACbc21a369eb35233ebe1a8995310c634b"
-auth_token = "9ba041095cfac3649aad180dd7f78d52"
+account_sid = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
+auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx"
 
 client = Client(account_sid, auth_token)
 
