@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"></head>
+    <body>
+    <div id = "wrapper">
+    <header>
+
+            <h1> PostScribe </h1>
+
+    </header>
+    <div class="container">
+    <form action = "http://127.0.0.1:5000/result" method='POST'>
+    Drug: <input type="text" name = "drug">
+            Frequency: <input type="text" name = "frequency">
+            Duration: <input type = "text" name = "duration">
+
+            <br><br>
+    Patient number: <input type="text" name="cellnum">
+            <br><br>
+            <input type="submit">
+        </form>
+        </div>
+        </div>
+    </body>
+</html>

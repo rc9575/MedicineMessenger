@@ -5,12 +5,12 @@ from flask import Flask
 
 
 
-account_sid = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-auth_token = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+account_sid = "" #input your own
+auth_token = ""
 
 client = Client(account_sid, auth_token)
 
-client_name = "Ved"
+client_name = "Daniel"
 string1 = "xanax"
 string2 = "two times a day" #how many times a day
 string3 = "two weeks"
@@ -81,17 +81,17 @@ def convert(list_of_times_in_int):
 #     for q in range(convert_to_int(second)):
 #
 
-def send_messages():
-    to = "+1" #fill this in again
+def send_messages(clientname, drug):
+    to = "+1" #input number
     message = client.messages.create(
         to,
-        from_="+1", #fill this in again too
-        body="Reminder for " + client_name + ": " + "take " +string1 + " now.")
+        from_="+1", #input number
+        body="Reminder for " + clientname + ": " + "take " + drug + " now.")
 
 timeList = convert(times_per_day(3))
-for i in range(numbers_per_day()):
-     schedule.every().day.at("0:04").do(send_messages)
+#for i in range(numbers_per_day()):
 
 
-while True:
-    schedule.run_pending()
+
+# while True:
+#     schedule.run_pending()
