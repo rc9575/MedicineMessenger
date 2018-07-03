@@ -30,7 +30,6 @@ def result():
         return render_template("result.html", result=result)
 
 
-#you had to use mothafuckin flask-celery ass shit for this, but in the duration of this hackathon, we were unable to use motherfuckin flask-ass celery shit. Thank you.
 # def loop_de_doop():
 #     while True:
 #         schedule.run_pending()
